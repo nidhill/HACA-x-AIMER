@@ -141,44 +141,44 @@ export default function Home() {
         </header>
 
         {/* Hero — centered */}
-        <section className="max-w-5xl mx-auto px-6 pt-14 pb-10 text-center">
-          <span className="text-blue-400 text-xs font-bold tracking-widest uppercase mb-4 block">
+        <section className="max-w-5xl mx-auto px-5 pt-10 pb-8 text-center">
+          <span className="text-blue-400 text-xs font-bold tracking-widest uppercase mb-3 block">
             Still Confused About
           </span>
-          <h1 className="text-5xl lg:text-7xl font-black uppercase leading-none mb-1">
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black uppercase leading-none mb-1">
             AI for Business
           </h1>
-          <h2 className="text-5xl lg:text-7xl font-black uppercase text-[#00d084] leading-none mb-6">
+          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-black uppercase text-[#00d084] leading-none mb-5">
             Growth?
           </h2>
 
-          <p className="text-blue-200 italic text-base mb-5">Exclusive Interactive Session</p>
+          <p className="text-blue-200 italic text-sm sm:text-base mb-4">Exclusive Interactive Session</p>
 
           {/* Topic pill */}
-          <div className="inline-flex items-center gap-2 bg-white/5 border border-[#00d084]/40 rounded-xl px-5 py-3 mb-5">
+          <div className="inline-flex items-center gap-2 bg-white/5 border border-[#00d084]/40 rounded-xl px-4 py-2.5 mb-4">
             <span className="bg-[#00d084] text-white text-[10px] font-black px-2 py-0.5 rounded-full uppercase tracking-wider shrink-0">
               Topic
             </span>
-            <span className="text-[#00d084] font-semibold text-base">
+            <span className="text-[#00d084] font-semibold text-sm sm:text-base">
               Applied AI in Sales & Marketing
             </span>
           </div>
 
-          <p className="text-blue-300/80 italic text-sm mb-8">Let&apos;s Talk It Out</p>
+          <p className="text-blue-300/80 italic text-sm mb-6">Let&apos;s Talk It Out</p>
 
           {/* Date + Platform + CTA */}
-          <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
-            <div className="bg-white/8 border border-white/15 rounded-2xl px-6 py-3 text-left">
-              <p className="text-lg font-black leading-tight">29 April 2026</p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
+            <div className="bg-white/8 border border-white/15 rounded-2xl px-6 py-3 text-center sm:text-left w-full sm:w-auto">
+              <p className="text-base font-black leading-tight">29 April 2026</p>
               <p className="text-blue-300 text-sm">7:00 PM – 9:00 PM</p>
             </div>
-            <div className="bg-white rounded-2xl px-5 py-3 flex items-center gap-2 shadow-lg">
+            <div className="bg-white rounded-2xl px-5 py-3 flex items-center gap-2 shadow-lg w-full sm:w-auto justify-center">
               <Image src="/google-meet.png" alt="Google Meet" width={26} height={26} />
               <span className="font-bold text-gray-800 text-sm">Google Meet</span>
             </div>
             <button
               onClick={openModal}
-              className="bg-[#00d084] hover:bg-[#00bb74] text-white font-black text-base py-3 px-8 rounded-full uppercase tracking-wider transition-all duration-200 shadow-2xl shadow-[#00d084]/40 hover:scale-105 active:scale-95"
+              className="w-full sm:w-auto bg-[#00d084] hover:bg-[#00bb74] text-white font-black text-base py-3 px-8 rounded-full uppercase tracking-wider transition-all duration-200 shadow-2xl shadow-[#00d084]/40 hover:scale-105 active:scale-95"
             >
               Register Now — Free
             </button>
@@ -195,25 +195,24 @@ export default function Home() {
             <div className="h-px flex-1 max-w-[80px] bg-gradient-to-l from-transparent to-[#00d084]/40" />
           </div>
 
-          <div className="grid grid-cols-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4">
             {[
-              { img: '/ashar.png',  name: 'Ashar Ameen',    role: 'Business Head',    org: 'HACA Tech School',    scale: 1.15 },
-              { img: '/rizwan.png', name: 'Rizwan',          role: 'Co-Founder & CEO', org: 'HACA',                scale: 1.0  },
-              { img: '/aseem.png',  name: 'Aseem Panoli',    role: 'CEO',              org: 'Aimer Business School', scale: 1.1 },
-              { img: '/nazil.png',  name: 'Muhammed Nazil',  role: 'Tech Researcher',  org: '& Mentor',            scale: 1.6  },
+              { img: '/ashar.png',  name: 'Ashar Ameen',    role: 'Business Head',    org: 'HACA Tech School',      scale: 1.15 },
+              { img: '/rizwan.png', name: 'Rizwan',          role: 'Co-Founder & CEO', org: 'HACA',                  scale: 1.0  },
+              { img: '/aseem.png',  name: 'Aseem Panoli',    role: 'CEO',              org: 'Aimer Business School', scale: 1.1  },
+              { img: '/nazil.png',  name: 'Muhammed Nazil',  role: 'Tech Researcher',  org: '& Mentor',              scale: 1.6  },
             ].map((s) => (
               <div key={s.name} className="group flex flex-col items-center">
 
-                {/* Fixed-height photo box — same for all 4 */}
-                <div className="relative w-full overflow-hidden" style={{ height: '320px' }}>
-                  {/* radial glow behind person */}
+                {/* Photo box */}
+                <div className="relative w-full overflow-hidden h-52 sm:h-80">
                   <div className="absolute inset-x-0 bottom-0 h-1/2" style={{background: 'radial-gradient(ellipse 60% 40% at 50% 100%, rgba(0,208,132,0.08), transparent)'}} />
 
                   <Image
                     src={s.img}
                     alt={s.name}
                     fill
-                    sizes="25vw"
+                    sizes="(max-width: 640px) 50vw, 25vw"
                     className="object-contain object-bottom transition-transform duration-500"
                     style={{
                       transform: `scale(${s.scale})`,
@@ -221,15 +220,14 @@ export default function Home() {
                     }}
                   />
 
-                  {/* floor shadow */}
                   <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2/3 h-4 bg-[#00d084]/20 blur-xl rounded-full" />
                 </div>
 
                 {/* Info card */}
-                <div className="w-full text-center px-3 pt-4 pb-2 border-t border-white/8">
-                  <p className="font-black text-white text-sm tracking-wide leading-tight">{s.name}</p>
+                <div className="w-full text-center px-2 pt-3 pb-3 border-t border-white/8">
+                  <p className="font-black text-white text-xs sm:text-sm tracking-wide leading-tight">{s.name}</p>
                   <p className="text-[#00d084] text-xs font-bold mt-1">{s.role}</p>
-                  <p className="text-blue-300/45 text-[11px] mt-0.5">{s.org}</p>
+                  <p className="text-blue-300/45 text-[10px] sm:text-[11px] mt-0.5">{s.org}</p>
                 </div>
               </div>
             ))}
