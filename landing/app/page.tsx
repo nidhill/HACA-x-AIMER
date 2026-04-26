@@ -36,7 +36,7 @@ export default function Home() {
   useEffect(() => {
     if (!submitted) return
     if (countdown === 0) {
-      window.open(WHATSAPP_URL, '_blank')
+      window.location.href = WHATSAPP_URL
       return
     }
     const t = setTimeout(() => setCountdown(c => c - 1), 1000)
