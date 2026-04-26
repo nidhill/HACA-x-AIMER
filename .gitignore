@@ -1,0 +1,14 @@
+# env secrets
+landing/.env.local
+landing/.env*.local
+
+# dependencies
+landing/node_modules/
+
+# Next.js build
+landing/.next/
+landing/out/
+
+# misc
+.DS_Store
+*.log
