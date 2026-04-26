@@ -200,7 +200,7 @@ export default function Home() {
               { img: '/ashar.png',  name: 'Ashar Ameen',    role: 'Business Head',    org: 'HACA Tech School',      scale: 1.4  },
               { img: '/rizwan.png', name: 'Rizwan',          role: 'Co-Founder & CEO', org: 'HACA',                  scale: 1.0  },
               { img: '/aseem.png',  name: 'Aseem Panoli',    role: 'CEO',              org: 'Aimer Business School', scale: 1.1  },
-              { img: '/nazil.png',  name: 'Muhammed Nazil',  role: 'Tech Researcher',  org: '& Mentor',              scale: 1.6  },
+              { img: '/nazil.png',  name: 'Muhammed Nazil',  role: 'Tech Researcher',  org: '& Mentor',              scale: 2.2  },
             ].map((s) => (
               <div key={s.name} className="group flex flex-col items-center">
 
@@ -216,7 +216,7 @@ export default function Home() {
                     className="object-contain object-bottom transition-transform duration-500"
                     style={{
                       transform: `scale(${s.scale})`,
-                      transformOrigin: s.img === '/nazil.png' ? '50% 35%' : 'bottom center'
+                      transformOrigin: s.img === '/nazil.png' ? '50% 40%' : 'bottom center'
                     }}
                   />
 
