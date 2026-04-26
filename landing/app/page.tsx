@@ -197,7 +197,7 @@ export default function Home() {
 
           <div className="grid grid-cols-2 sm:grid-cols-4">
             {[
-              { img: '/ashar.png',  name: 'Ashar Ameen',    role: 'Business Head',    org: 'HACA Tech School',      scale: 1.25 },
+              { img: '/ashar.png',  name: 'Ashar Ameen',    role: 'Business Head',    org: 'HACA Tech School',      scale: 1.15 },
               { img: '/rizwan.png', name: 'Rizwan',          role: 'Co-Founder & CEO', org: 'HACA',                  scale: 1.0  },
               { img: '/aseem.png',  name: 'Aseem Panoli',    role: 'CEO',              org: 'Aimer Business School', scale: 1.1  },
               { img: '/nazil.png',  name: 'Muhammed Nazil',  role: 'Tech Researcher',  org: '& Mentor',              scale: 2.2  },
@@ -216,7 +216,7 @@ export default function Home() {
                     className="object-contain object-bottom transition-transform duration-500"
                     style={{
                       transform: `scale(${s.scale})`,
-                      transformOrigin: s.img === '/nazil.png' ? '50% 40%' : s.img === '/ashar.png' ? '50% 20%' : 'bottom center'
+                      transformOrigin: s.img === '/nazil.png' ? '50% 40%' : 'bottom center'
                     }}
                   />
 
