@@ -15,6 +15,28 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "AI for Business Growth | AIMER × HACA Tech School",
   description: "Exclusive Interactive Session on Applied AI in Sales & Marketing. 29 April 2026, 7–9 PM on Google Meet.",
+  metadataBase: new URL("https://haca-x-aimer.vercel.app"),
+  openGraph: {
+    title: "AI for Business Growth | AIMER × HACA Tech School",
+    description: "Exclusive Interactive Session on Applied AI in Sales & Marketing. 29 April 2026, 7–9 PM on Google Meet.",
+    url: "https://haca-x-aimer.vercel.app",
+    siteName: "AIMER × HACA Tech School",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1080,
+        height: 1920,
+        alt: "AI for Business Growth – 29 April 2026",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI for Business Growth | AIMER × HACA Tech School",
+    description: "Exclusive Interactive Session on Applied AI in Sales & Marketing. 29 April 2026, 7–9 PM on Google Meet.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
