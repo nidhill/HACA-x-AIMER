@@ -8,7 +8,6 @@ const WHATSAPP_URL = 'https://chat.whatsapp.com/GeRHFNc15sY7ePWPxD03gk?mode=gi_t
 type FormData = {
   name: string
   contact: string
-  email: string
   role: string
   ai_knowledge: string
   pain_points: string
@@ -18,7 +17,6 @@ type FormData = {
 const initialForm: FormData = {
   name: '',
   contact: '',
-  email: '',
   role: '',
   ai_knowledge: '',
   pain_points: '',
@@ -67,9 +65,6 @@ export default function Home() {
     if (!form.contact.trim()) e.contact = 'Contact number is required'
     else if (!/^[0-9+\s\-()]{7,15}$/.test(form.contact.trim()))
       e.contact = 'Enter a valid contact number'
-    if (!form.email.trim()) e.email = 'Email is required'
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim()))
-      e.email = 'Enter a valid email address'
     if (!form.role) e.role = 'Please select an option'
     if (!form.ai_knowledge) e.ai_knowledge = 'Please rate your knowledge'
     if (!form.pain_points.trim()) e.pain_points = 'This field is required'
@@ -89,7 +84,6 @@ export default function Home() {
         body: JSON.stringify({
           name: form.name.trim(),
           contact: form.contact.trim(),
-          email: form.email.trim(),
           role: form.role,
           ai_knowledge: form.ai_knowledge,
           pain_points: form.pain_points.trim(),
@@ -344,23 +338,6 @@ export default function Home() {
                         />
                         {errors.contact && <p className="text-red-400 text-xs mt-1">{errors.contact}</p>}
                       </div>
-                    </div>
-
-                    {/* Email */}
-                    <div>
-                      <label className="block text-xs font-semibold text-white/50 mb-1.5">
-                        Email Id <span className="text-[#00d084]">*</span>
-                      </label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={form.email}
-                        onChange={handleChange}
-                        placeholder="Enter your email id"
-                        className={`w-full rounded-xl px-3.5 py-2.5 text-white text-sm placeholder-white/20 focus:outline-none transition-all ${errors.email ? 'border border-red-400/60' : 'border border-white/10 focus:border-[#00d084]/60'}`}
-                        style={{ background: 'rgba(255,255,255,0.04)' }}
-                      />
-                      {errors.email && <p className="text-red-400 text-xs mt-1">{errors.email}</p>}
                     </div>
 
                     {/* Role */}
